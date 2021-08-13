@@ -1,0 +1,265 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* index2.html */
+.content{
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  margin: 80px auto;
+}
+
+.content-index{
+  width: 1200px;
+  height: 700px;
+  margin: 80px auto;
+}
+
+#editBtn {
+  display: none;
+  position: absolute;
+  top: 188px;
+  border: none;
+  width: 150px;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  background: #0678D6;
+  left: 522px;
+}
+
+#backBtn {
+  display: none;
+  position: absolute;
+  top:290px;
+  background: #0678D6;
+  border: none;
+  width: 100px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  height: 40px;
+  left: 54px;
+}
+
+.content-index img,.content img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+}
+
+#mainMenu-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.btn{
+  position: absolute;
+  right: 140px;
+  bottom: 125px;
+  width: 200px;
+  background: none;
+  border: none;
+  height: 100px;
+}
+
+.btn a {
+  font-size: 20px;
+  line-height: 38px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* main-menu.html */
+#menuBtn {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+}
+
+#nav {
+  display: none;
+}
+
+#menu{
+  display: block;
+}
+
+#menuBtn a{
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* mainMenu.html */
+header {
+  position: absolute;
+  top: 10px;
+  left: 28.95%;
+}
+
+header #nav ul li {
+  float: left;
+  width: 73px;
+  height: 65px;
+  list-style: none;
+}
+
+header #nav ul li button{
+  line-height: 80px;
+}
+
+.menu-item {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#control {
+  width: 700px;
+  height: 300px;
+  display: none;
+  position: absolute;
+  top: 32%;
+  left: 15%;
+}
+
+#control ul{
+  list-style: none;
+  width: 700px;
+}
+
+#control ul li {
+  width: 150px;
+  height: 122px;
+  margin-right: 20px;
+  float: left;
+  margin-left: 0px;
+  cursor: pointer;
+  text-align: right;
+  line-height: 250px;
+}
+
+#control .con-2 {
+  position: absolute;
+  top: 180px;
+  width:700px;
+}
+
+#control .con-2 ul li{
+  width: 120px;
+}
+
+
+#control button {
+  font-size: 16px;
+}
+
+.content #aside-nav {
+  position: absolute;
+  right: -90px;
+  top:150px;
+  display: block;
+}
+
+.content #aside-nav ul li {
+  height: 30px;
+  width: 180px;
+  margin: 19px;
+  list-style: none;
+}
+
+.content #aside-nav ul li button {
+  font-size: 18px;
+  padding-left: 30px;
+  text-align: center;
+}
+
+.main-img{
+  position: absolute;
+  top: 112px;
+  left: 40px;
+}
+
+.select {
+  position: absolute;
+  top: 90px;
+  right: -40px;
+  width: 180px;
+  font-size: 20px;
+  list-style: none;
+}
+.select .liexi {
+  width: 80px;
+  float: left;
+  color: #fff;
+  background: none;
+  border: none;
+  height: 50px;
+}
+.select .zhuxi {
+  width: 80px;
+  border: none;
+  color: #fff;
+  background: none;
+  float: left;
+  height: 50px;
+}
+
+#zhuxi-content {
+  position: absolute;
+  top: 150px;
+  width:160px;
+  display: none;
+  right: -35px;
+  /*background: url("../images/主席-bg.png");*/
+}
+
+#zhuxi-content ul li {
+  height: 30px;
+  width: 180px;
+  margin: 19px;
+  list-style: none;
+}
+
+#zhuxi-content ul li button {
+  font-size: 18px;
+  padding-left: 30px;
+  text-align: center;
+}
+
+.zhuxi-img{
+  background: #0678D6;
+  height: 430px;
+  width: 130px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

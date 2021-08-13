@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>helida合利达|无纸化系统演示</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class="content">
+
+  <!--菜单按钮-->
+  <div id="menu">
+    <!-- <img src="images/菜单-init-列席.jpg" alt="" id="mainImg" style="height: 700px;width: 1250px;">-->
+    <button id="menuBtn" onclick="changeImg();" ><a>菜 单</a></button>
+  </div>
+
+  <!--系统主图-->
+  <img src="images/菜单-init-列席.jpg"  alt="" id="mainMenu-img"  style="height: 700px;width: 1250px;">
+
+  <!--顶部菜单列表-->
+  <header>
+    <div id="nav">
+      <ul>
+        <li onclick="changeImg();" style="margin-left: 5px;"><button class="menu-item" id="broadcast">同屏广播</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="edit" >手绘批注</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="ed">电子白板</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="zj">跟踪主讲</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="change">桌面切换</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="screen">截取屏幕</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="setting">系统设置</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="exit">退出系统</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!--main 内容切换-->
+  <div class="main-img">
+    <img src="images/main-null.jpg" alt="" id="img"  style="width: 990px;height: 550px;">
+    <button id="editBtn">开始批注</button>
+    <button id="backBtn">返 回</button>
+  </div>
+
+  <!--right aside 列席导航栏-->
+  <aside>
+
+    <!--功能选择-->
+    <ul class="select">
+      <li ><button class="liexi" id="liexi">列席</button></li>
+      <li ><button class="zhuxi" id="zhuxi">主席</button></li>
+    </ul>
+
+    <!--列席-->
+    <div id="aside-nav">
+      <ul>
+        <li onclick="changeImg();"><button class="menu-item" id="process">会议议程</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="doc">会议资料</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="jiyao">会议纪要</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="read">读取U盘</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="share">文件共享</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="msg">发送信息</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="toupiao">投票表决</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="tongzhi">系统通知</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="service">会议服务</button></li>
+      </ul>
+    </div>
+
+    <!--主席-->
+    <div id="zhuxi-content">
+      <!--           <div class="zhuxi-img"></div>-->
+      <ul>
+        <li onclick="changeImg();"><button class="menu-item" id="resc">资料控制</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="pickc">投票控制</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="xinhao">信号控制</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="jizhong">集中控制</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="online">在线控制</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="pifu">更换皮肤</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="toutai">打开后台</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="gonggao">公告发布</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="qiandao">签到信息</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="group">信号组合</button></li>
+      </ul>
+    </div>
+
+    <!--主席-集中控制-->
+    <div id="control">
+      <ul>
+        <li onclick="changeImg();"><button class="menu-item " id="welcome">显示欢迎页面</button></li>
+        <li onclick="changeImg();"><button class="menu-item " id="showQ">显示签到页面</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="showT">显示投票页面</button></li>
+        <li onclick="changeImg();"><button class="menu-item" id="showM">显示会议标语页面</button></li>
+      </ul>
+      <ul class="con-2">
+        <li onclick="changeImg();"><button class="menu-item" id="restart" style="padding-right: 20px">重启会议</button></li>
+        <li onclick="changeImg();"><button class="menu-item " id="end" style="padding-right: 25px">结束同屏</button></li>
+        <li onclick="changeImg();"><button class="menu-item " id="close" style="padding-right: 10px">关闭画板</button></li>
+        <li onclick="changeImg();"><button class="menu-item " id="allClose" style="padding-right: 20px">统一关机</button></li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+</body>
+
+<script>
+  function getLiexi(){
+    let zcontent = document.getElementById('zhuxi-content');
+    let lxi = document.getElementsByClassName('aside-nav');
+    lxi.style.display = "block";
+    zcontent.style.display = "none";
+  }
+  function getZhuxi(){
+    let zcontent = document.getElementById('zhuxi-content');
+    let lxi = document.getElementsByClassName('aside-nav');
+    lxi.style.display = "none";
+    zcontent.style.display = "block";
+  }
+  function changeImg(){
+    let menuBtn = document.getElementById('menuBtn');
+    let img = document.getElementById('img');
+    let pickc = document.getElementById('pickc');
+    let xinhao = document.getElementById('xinhao');
+    let jizhong = document.getElementById('jizhong');
+    let online = document.getElementById('online');
+    let pifu = document.getElementById('pifu');
+    let toutai = document.getElementById('toutai');
+    let gonggao = document.getElementById('gonggao');
+    let qiandao = document.getElementById('qiandao');
+    let group = document.getElementById('group');
+    let broadcast = document.getElementById('broadcast');
+    let edit = document.getElementById('edit');
+    let ed = document.getElementById('ed');
+    let zj = document.getElementById('zj');
+    let change = document.getElementById('change');
+    let screen = document.getElementById('screen');
+    let setting = document.getElementById('setting');
+    let exit = document.getElementById('exit');
+    let process = document.getElementById('process');
+    let doc = document.getElementById('doc');
+    let jiyao = document.getElementById('jiyao');
+    let read = document.getElementById('read');
+    let share = document.getElementById('share');
+    let msg = document.getElementById('msg');
+    let toupiao = document.getElementById('toupiao');
+    let tongzhi = document.getElementById('tongzhi');
+    let service = document.getElementById('service');
+    let editBtn = document.getElementById('editBtn');
+    let backBtn = document.getElementById('backBtn');
+    let liexi = document.getElementById('liexi');
+    let zhuxi = document.getElementById('zhuxi');
+    let resc = document.getElementById('resc');
+    
+    // 集中控制菜单列表
+    let welcome = document.getElementById('welcome');
+    let showQ = document.getElementById('showQ');
+    let showT = document.getElementById('showT');
+    let showM = document.getElementById('showM');
+    let restart = document.getElementById('restart');
+    let end = document.getElementById('end');
+    let close = document.getElementById('close');
+    let allClose = document.getElementById('allClose');
+    welcome.onclick = (e) => {
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+    };
+    showQ.onclick = (e) => {
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+    };
+    showT.onclick = (e) => {
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+    };
+    showM.onclick = (e) => {
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+    };
+    restart.onclick = (e) => {
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+    };
+    end.onclick = (e) => {
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+    };
+    close.onclick = (e) => {
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+    };
+    allClose.onclick = (e) => {
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+    };
+
+    /*批注页面返回*/
+    backBtn.addEventListener('click',goBack);
+    editBtn.addEventListener('click',toEdit);
+
+    // 菜单按钮
+    menuBtn.onclick = (e) => {
+      let menuBtn = document.getElementById('menuBtn');
+      menuBtn.style.display = "none";
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+      let nav = document.getElementById('nav');
+      nav.style.display = "block";
+    };
+
+    resc.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/主席-资料控制.jpg";
+    };
+
+    pickc.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/主席-投票控制.jpg";
+    };
+    xinhao.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/主席-信号控制.jpg";
+    };
+    jizhong.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "block";
+      img.src = "images/主席-集中控制1.jpg";
+    };
+    online.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/主席-在线控制.jpg";
+    };
+    pifu.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/主席-更换皮肤.jpg";
+    };
+    toutai.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/打开后台2.jpg";
+    };
+    gonggao.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/主席-发布公告.jpg";
+    };
+    qiandao.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/主席-签到信息.jpg";
+    };
+    group.onclick = (e) => {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/主席-信息组合.jpg";
+    };
+
+
+    function toEdit(){
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/批注.jpg";
+    }
+    function goBack(){
+      editBtn.style.display = "block";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      window.location.go(-1);
+    }
+
+    edit.onclick = (e) => {
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/菜单-手绘批注.jpg";
+      editBtn.style.display = "block";
+    };
+
+    broadcast.onclick = (e) => {
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      editBtn.style.display = "none";
+      img.src = "images/菜单-同屏广播.jpg";
+    };
+    ed.onclick = (e) =>  {
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/菜单-电子白板.jpg";
+      editBtn.style.display = "block";
+    };
+    zj.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/main-null.jpg";
+    };
+    change.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/桌面切换.jpg";
+    };
+    screen.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/屏幕截图.jpg"
+    };
+    setting.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/菜单-系统设置.jpg"
+    };
+    exit.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/菜单-退出系统.jpg"
+    };
+    process.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/会议议程.jpg"
+    };
+    doc.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/会议资料.jpg"
+    };
+    jiyao.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/会议纪要.jpg"
+    };
+    read.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/读取U盘.jpg"
+    };
+    share.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/文件共享.jpg"
+    };
+    msg.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/发送信息.jpg"
+    };
+    toupiao.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/投票表决.jpg"
+    };
+    tongzhi.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/系统通知.jpg"
+    };
+    service.onclick = (e) =>  {
+      editBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      img.src = "images/会议服务.jpg"
+    };
+    liexi.onclick = (e) => {
+      editBtn.style.display = "none";
+      let menuBtn = document.getElementById('menuBtn');
+      menuBtn.style.display = "none";
+      let nav = document.getElementById('nav');
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      nav.style.display = "block";
+      let zcontent = document.getElementById('zhuxi-content');
+      let lxi = document.getElementById('aside-nav');
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected.jpg";
+      lxi.style.display = "block";
+      zcontent.style.display = "none";
+    };
+    zhuxi.onclick = (e) => {
+      editBtn.style.display = "none";
+      let menuBtn = document.getElementById('menuBtn');
+      menuBtn.style.display = "none";
+      let control = document.getElementById('control');
+      control.style.display = "none";
+      let nav = document.getElementById('nav');
+      nav.style.display = "block";
+      let zcontent = document.getElementById('zhuxi-content');
+      let lxi = document.getElementById('aside-nav');
+      lxi.style.display = "none";
+      let mainMenu = document.getElementById('mainMenu-img');
+      mainMenu.src = "images/菜单-selected-主席.jpg";
+      zcontent.style.display = "block";
+    };
+  }
+</script>
+</html>
