@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <title>helida合利达|无纸化系统演示</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
-        crossorigin="anonymous">
 </head>
 <body>
 <div class="content">
@@ -119,6 +115,12 @@
     lxi.style.display = "none";
     zcontent.style.display = "block";
   }
+
+  function hiddenControl(){
+    let control = document.getElementById('control');
+    control.style.display = "none";
+  }
+
   function changeImg(){
     let menuBtn = document.getElementById('menuBtn');
     let img = document.getElementById('img');
@@ -153,7 +155,7 @@
     let liexi = document.getElementById('liexi');
     let zhuxi = document.getElementById('zhuxi');
     let resc = document.getElementById('resc');
-    
+
     // 集中控制菜单列表
     let welcome = document.getElementById('welcome');
     let showQ = document.getElementById('showQ');
@@ -212,21 +214,18 @@
 
     resc.onclick = (e) => {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/主席-资料控制.jpg";
     };
 
     pickc.onclick = (e) => {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/主席-投票控制.jpg";
     };
     xinhao.onclick = (e) => {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/主席-信号控制.jpg";
     };
     jizhong.onclick = (e) => {
@@ -237,156 +236,130 @@
     };
     online.onclick = (e) => {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/主席-在线控制.jpg";
     };
     pifu.onclick = (e) => {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/主席-更换皮肤.jpg";
     };
     toutai.onclick = (e) => {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/打开后台2.jpg";
     };
     gonggao.onclick = (e) => {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/主席-发布公告.jpg";
     };
     qiandao.onclick = (e) => {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/主席-签到信息.jpg";
     };
     group.onclick = (e) => {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/主席-信息组合.jpg";
     };
-
-
+    
     function toEdit(){
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/批注.jpg";
     }
+    
     function goBack(){
       editBtn.style.display = "block";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       window.location.go(-1);
     }
 
     edit.onclick = (e) => {
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/菜单-手绘批注.jpg";
       editBtn.style.display = "block";
     };
-
     broadcast.onclick = (e) => {
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       editBtn.style.display = "none";
       img.src = "images/菜单-同屏广播.jpg";
     };
     ed.onclick = (e) =>  {
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/菜单-电子白板.jpg";
       editBtn.style.display = "block";
     };
     zj.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/main-null.jpg";
     };
     change.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/桌面切换.jpg";
     };
     screen.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/屏幕截图.jpg"
     };
     setting.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/菜单-系统设置.jpg"
     };
     exit.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/菜单-退出系统.jpg"
     };
     process.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/会议议程.jpg"
     };
     doc.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/会议资料.jpg"
     };
     jiyao.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/会议纪要.jpg"
     };
     read.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/读取U盘.jpg"
     };
     share.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/文件共享.jpg"
     };
     msg.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/发送信息.jpg"
     };
     toupiao.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/投票表决.jpg"
     };
     tongzhi.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/系统通知.jpg"
     };
     service.onclick = (e) =>  {
       editBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       img.src = "images/会议服务.jpg"
     };
     liexi.onclick = (e) => {
@@ -394,8 +367,7 @@
       let menuBtn = document.getElementById('menuBtn');
       menuBtn.style.display = "none";
       let nav = document.getElementById('nav');
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       nav.style.display = "block";
       let zcontent = document.getElementById('zhuxi-content');
       let lxi = document.getElementById('aside-nav');
@@ -408,8 +380,7 @@
       editBtn.style.display = "none";
       let menuBtn = document.getElementById('menuBtn');
       menuBtn.style.display = "none";
-      let control = document.getElementById('control');
-      control.style.display = "none";
+      hiddenControl();
       let nav = document.getElementById('nav');
       nav.style.display = "block";
       let zcontent = document.getElementById('zhuxi-content');
